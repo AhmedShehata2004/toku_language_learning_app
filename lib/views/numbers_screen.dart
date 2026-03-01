@@ -81,6 +81,7 @@ class NumbersScreen extends StatelessWidget {
         itemCount: numbers.length,
         itemBuilder: (context, index) {
           return CustomItem(
+            backgroundColor:  Color(0xffEF9235),
             image: numbers[index].imagePath,
             japaneseText: numbers[index].japaneseName,
             englishText: numbers[index].englishName,

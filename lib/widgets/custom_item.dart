@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomItem extends StatelessWidget {
-  const CustomItem({super.key, required this.image, required this.japaneseText, required this.englishText});
+  const CustomItem({super.key, required this.image, required this.backgroundColor, required this.japaneseText, required this.englishText});
   final String image;
   final String japaneseText;
   final String englishText;
-
+  final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
     return Container(
         height: 100,
-        color: Color(0xffEF9235),
+        color: backgroundColor,
         child: Row(
           children: [
             Container(
