@@ -31,12 +31,13 @@ class HomeScreen extends StatelessWidget {
              Navigator.pushNamed(context, '/family_members');
            },
           ),
-          CustomSectionContainer(containerColor: Color(0xff50ADC7), text: 'Colors',
+          CustomSectionContainer(containerColor: Color(0xff7B3E98), text: 'Colors',
           onTap: () {
              Navigator.pushNamed(context, '/colors');
            },
+           
           ),
-          CustomSectionContainer(containerColor: Color(0xff7B3E98), text: 'Phrases',
+          CustomSectionContainer(containerColor: Color(0xff50ADC7), text: 'Phrases',
           onTap: () {
              Navigator.pushNamed(context, '/phrases');
            },

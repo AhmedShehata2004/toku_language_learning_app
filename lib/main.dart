@@ -17,12 +17,12 @@ class TukoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/home',
-      routes: {
+      routes: { 
         '/home': (context) => const HomeScreen(),
         '/numbers': (context) =>  NumbersScreen(),
         '/family_members': (context) =>  FamilyMembersScreen(),
-        '/colors': (context) => const ColorsScreen(),
-        '/phrases': (context) => const PhrasesScreen(),
+        '/colors': (context) =>  ColorsScreen(),
+        '/phrases': (context) =>  PhrasesScreen(),
       },
     );
   }
