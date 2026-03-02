@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tucko/constants/assets.dart';
 import 'package:tucko/models/phrases_model.dart';
 import 'package:tucko/widgets/custom_phrases_item.dart';
 
@@ -8,44 +9,49 @@ class PhrasesScreen extends StatelessWidget {
     PhrasesModel(
       englishName: 'Where are you going?',
       japaneseName: 'Doko e iku no?',
+      soundPath: Assets.soundsPhrasesWhereAreYouGoing,
     ),
     PhrasesModel(
       englishName: 'What is your name?',
       japaneseName: 'O namae wa nandesu ka?',
+      soundPath: Assets.soundsPhrasesWhatIsYourName,
     ),
     PhrasesModel(
-      englishName: 'My name is...',
-      japaneseName: 'Watashi no namae wa ... desu.',
+      englishName: 'donot forget to subscribe',
+      japaneseName: 'Kōdoku suru koto o wasurenaide kudasai',
+      soundPath: Assets.soundsPhrasesDontForgetToSubscribe,
     ),
     PhrasesModel(
       englishName: 'How are you feeling?',
       japaneseName: 'Go kibun wa ikagadesu ka?',
+      soundPath: Assets.soundsPhrasesHowAreYouFeeling,
     ),
     PhrasesModel(
-      englishName: 'I’m feeling good.',
-      japaneseName: 'Kibun wa genki desu.',
+      englishName: 'i love programming',
+      japaneseName: 'Watashi wa puroguramingu ga daisuki desu',
+      soundPath: Assets.soundsPhrasesILoveProgramming,
     ),
     PhrasesModel(
       englishName: 'Are you coming?',
       japaneseName: 'Kimasu ka?',
+      soundPath: Assets.soundsPhrasesAreYouComing,
     ),
     PhrasesModel(
       englishName: 'Yes, I’m coming.',
       japaneseName: 'Hai, kimasu.',
+      soundPath: Assets.soundsPhrasesYesImComing,
     ),
     PhrasesModel(
       englishName: 'I’m coming.',
       japaneseName: 'Kimasu.',
+      soundPath: Assets.soundsPhrasesYesImComing,
     ),
     PhrasesModel(
-      englishName: 'Let’s go.',
-      japaneseName: 'Ikimashou.',
-      
-    ),
-    PhrasesModel(
-      englishName: 'Come here.',
-      japaneseName: 'Koko e kite.',
-    ),
+      englishName: 'i love anime',
+      japaneseName: 'Watashi wa anime ga daisuki desu.',
+      soundPath: Assets.soundsPhrasesILoveAnime,
+    )
+    
   ];
 
   @override
@@ -68,6 +74,7 @@ class PhrasesScreen extends StatelessWidget {
           backgroundColor:Color(0xff50ADC7),
           japaneseText: phrases[index].japaneseName,
           englishText: phrases[index].englishName,
+          soundPath: phrases[index].soundPath,
         );
       },
       ),

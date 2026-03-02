@@ -1,50 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:tucko/constants/assets.dart';
+import 'package:tucko/models/colors_model.dart';
 import 'package:tucko/widgets/custom_item.dart';
 
 class ColorsScreen extends StatelessWidget {
    ColorsScreen({super.key});
-  List colors = [
-    {
-      'englishName': 'red',
-      'japaneseName': 'aka',
-      'imagePath': Assets.imagesColorsColorRed,
-    },
-    {
-      'englishName': 'green',
-      'japaneseName': 'midori',
-      'imagePath': Assets.imagesColorsColorGreen,
-    },
-    {
-      'englishName': 'brown',
-      'japaneseName': 'chairo',
-      'imagePath': Assets.imagesColorsColorBrown,
-    },
-    {
-      'englishName': 'gray',
-      'japaneseName': 'haiiro',
-      'imagePath': Assets.imagesColorsColorGray,
-    },
-    {
-      'englishName': 'black',
-      'japaneseName': 'kuro',
-      'imagePath': Assets.imagesColorsColorBlack,
-    },
-    {
-      'englishName': 'white',
-      'japaneseName': 'shiro',
-      'imagePath': Assets.imagesColorsColorWhite,
-    },
-    {
-      'englishName': 'dusty yellow',
-      'japaneseName': 'kiiro',
-      'imagePath': Assets.imagesColorsColorDustyYellow,
-    },
-    {
-      'englishName': 'mustard yellow',
-      'japaneseName': 'karashi iro',
-      'imagePath': Assets.imagesColorsYellow,
-    },
+  List <ColorsModel> colors = [
+    ColorsModel(
+      englishName: 'red',
+      japaneseName: 'aka',
+      imagePath: Assets.imagesColorsColorRed,
+      soundPath: Assets.soundsColorsRed,
+    ),
+    ColorsModel(
+      englishName: 'green',
+      japaneseName: 'midori',
+      imagePath: Assets.imagesColorsColorGreen,
+      soundPath: Assets.soundsColorsGreen
+    ),
+    ColorsModel(
+      englishName: 'brown',
+      japaneseName: 'chairo',
+      imagePath: Assets.imagesColorsColorBrown,
+      soundPath: Assets.soundsColorsBrown
+    ),
+    ColorsModel(
+      englishName: 'gray',
+      japaneseName: 'haiiro',
+      imagePath: Assets.imagesColorsColorGray,
+      soundPath: Assets.soundsColorsGray
+    ),
+    ColorsModel(
+      englishName: 'black',
+      japaneseName: 'kuro',
+      imagePath: Assets.imagesColorsColorBlack,
+      soundPath: Assets.soundsColorsBlack
+    ),
+    ColorsModel(
+      englishName: 'white',
+      japaneseName: 'shiro',
+      imagePath: Assets.imagesColorsColorWhite,
+      soundPath: Assets.soundsColorsWhite
+    ),
+    ColorsModel(
+      englishName: 'dusty yellow',
+      japaneseName: 'kiiro',
+      imagePath: Assets.imagesColorsColorDustyYellow,
+      soundPath: Assets.imagesColorsColorDustyYellow
+    ),
+    ColorsModel(
+      englishName: 'mustard yellow',
+      japaneseName: 'karashi iro',
+      imagePath: Assets.imagesColorsYellow,
+      soundPath: Assets.soundsColorsYellow
+    ),
   ];
 
   @override
@@ -65,9 +74,10 @@ class ColorsScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return CustomItem(
             backgroundColor: Color(0xff7B3E98),
-            image: colors[index]['imagePath'],
-            japaneseText: colors[index]['japaneseName'],
-            englishText: colors[index]['englishName'],
+            image: colors[index].imagePath,
+            japaneseText: colors[index].japaneseName,
+            englishText: colors[index].englishName,
+            soundPath: colors[index].soundPath,
             );
         },
       ),

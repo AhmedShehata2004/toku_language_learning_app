@@ -1,11 +1,14 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
+
 class CustomItem extends StatelessWidget {
-  const CustomItem({super.key, required this.image, required this.backgroundColor, required this.japaneseText, required this.englishText});
+  const CustomItem({super.key, this.soundPath ,required this.image, required this.backgroundColor, required this.japaneseText, required this.englishText});
   final String image;
   final String japaneseText;
   final String englishText;
   final Color backgroundColor;
+  final String? soundPath;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +33,15 @@ class CustomItem extends StatelessWidget {
             Spacer(),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Icon(Icons.play_arrow, color: Colors.white),
+              child: IconButton(
+                icon: Icon(Icons.play_arrow, color: Colors.white),
+                onPressed: () async {
+                  final player = AudioPlayer();
+                  await player.play(AssetSource(soundPath!));
+
+
+                },
+              ),
             ),
           ],
            ),

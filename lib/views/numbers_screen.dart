@@ -10,51 +10,69 @@ class NumbersScreen extends StatelessWidget {
       englishName: 'one',
       japaneseName: 'ichi',
       imagePath: Assets.imagesNumbersNumberOne,
+      soundPath: Assets.soundsNumbersNumberOneSound,
     ),
      Number(
       englishName: 'two',
       japaneseName: 'ni',
       imagePath: Assets.imagesNumbersNumberTwo,
+      soundPath: Assets.soundsNumbersNumberTwoSound,
+      
     ),
      Number(
       englishName: 'three',
       japaneseName: 'san',
       imagePath: Assets.imagesNumbersNumberThree,
+      soundPath: Assets.soundsNumbersNumberThreeSound,
     ),
      Number(
       englishName: 'four',
       japaneseName: 'yon',
       imagePath: Assets.imagesNumbersNumberFour,
+            soundPath: Assets.soundsNumbersNumberFourSound,
+
     ),
      Number(
       englishName: 'five',
       japaneseName: 'go',
       imagePath: Assets.imagesNumbersNumberFive,
+            soundPath: Assets.soundsNumbersNumberFiveSound,
+
     ),
      Number(
       englishName: 'six',
       japaneseName: 'roku',
       imagePath: Assets.imagesNumbersNumberSix,
+            soundPath: Assets.soundsNumbersNumberSixSound,
+
     ),
      Number(
       englishName: 'seven',
       japaneseName: 'nana',
       imagePath: Assets.imagesNumbersNumberSeven,
+            soundPath: Assets.soundsNumbersNumberSevenSound,
+
     ),
      Number(
       englishName: 'eight',
       japaneseName: 'hachi',
       imagePath: Assets.imagesNumbersNumberEight,
+            soundPath: Assets.soundsNumbersNumberEightSound,
+
     ),
      Number(
       englishName: 'nine',
       japaneseName: 'kyu',
       imagePath: Assets.imagesNumbersNumberNine,
+            soundPath: Assets.soundsNumbersNumberNineSound,
+
     ),
      Number(
       englishName: 'ten',
       japaneseName: 'juu',
       imagePath: Assets.imagesNumbersNumberTen,
+            soundPath: Assets.soundsNumbersNumberTenSound,
+
     ),
   ];
 
@@ -85,6 +103,8 @@ class NumbersScreen extends StatelessWidget {
             image: numbers[index].imagePath,
             japaneseText: numbers[index].japaneseName,
             englishText: numbers[index].englishName,
+            soundPath: numbers[index].soundPath,
+            
             )
           ;
         },
